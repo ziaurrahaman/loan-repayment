@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "327469737245",
+    "project_id": "loan-repayment-demo-app",
+    "storage_bucket": "loan-repayment-demo-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327469737245:android:7099fb01e4ecce13a3adf4",
+        "android_client_info": {
+          "package_name": "com.example.demo_loan_repayment_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327469737245-3l9u41tb3cufepgjb1d59agvc6f2jdio.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmuScD1NoIFgvJEiV1NfJWQ6DZ985dj3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327469737245-3l9u41tb3cufepgjb1d59agvc6f2jdio.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
