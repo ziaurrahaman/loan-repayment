@@ -11,11 +11,11 @@ class LogInPage extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            flex: 4,
+            flex: 2,
             child: LoginPageLogoAndTextWidgt(),
           ),
           Expanded(
-            flex: 2,
+            flex: 3,
             child: LoginPageTextFieldsWidgets(),
           ),
           LoginButtonWidget(),
@@ -54,11 +54,16 @@ class LoginPageLogoAndTextWidgt extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
+            flex: 3,
             child: Align(
                 alignment: Alignment.bottomCenter,
-                child: Image.asset(ImagePathController.splashImage)),
+                child: CircleAvatar(
+                    radius: 80,
+                    backgroundImage:
+                        AssetImage(ImagePathController.govermentLogoImage))),
           ),
           Expanded(
+            flex: 1,
             child: FittedBox(
               child: Text(
                 StringController.loginPageString,
