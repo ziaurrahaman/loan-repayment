@@ -36,9 +36,9 @@ class SizeConfigController {
     heightMultiplier = _blockHeight;
     widthMultiplier = _blockWidth;
 
-    print('screenWidth: $_screenWidth');
-    print('screenHeight: $_screenHeight');
-    print('blockHeight: $_blockHeight');
-    print('blockWidth: $_blockWidth');
+    // print('screenWidth: $_screenWidth');
+    // print('screenHeight: $_screenHeight');
+    // print('blockHeight: $_blockHeight');
+    // print('blockWidth: $_blockWidth');
   }
 }
