@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ThemeController {
   ThemeController._();
   static const Color appBackgroundColor = Color(0xFFFFF7EC);
-  static const Color topBarBackgroundColor = Color(0xFFFFD974);
+  static const Color topBarBackgroundColor = Color(0xFF008103);
   static const Color selectedTabBackgroundColor = Color(0xFFFFC442);
   static const Color unSelectedTabBackgroundColor = Color(0xFFFFFFFC);
   static const Color subTitleTextColor = Color(0xFF9F988F);
@@ -51,7 +51,7 @@ class ThemeController {
   );
 
   static final TextStyle _buttonLight = TextStyle(
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 2.5 * SizeConfigController.textSizeMultiplier,
   );
 
