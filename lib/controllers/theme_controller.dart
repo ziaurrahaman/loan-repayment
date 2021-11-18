@@ -15,11 +15,11 @@ class ThemeController {
     textTheme: lightTextTheme,
   );
 
-  static final ThemeData darkTheme = ThemeData(
-    scaffoldBackgroundColor: Colors.black,
-    brightness: Brightness.dark,
-    textTheme: darkTextTheme,
-  );
+  // static final ThemeData darkTheme = ThemeData(
+  //   scaffoldBackgroundColor: Colors.black,
+  //   brightness: Brightness.dark,
+  //   textTheme: darkTextTheme,
+  // );
 
   static final TextTheme lightTextTheme = TextTheme(
     headline4: _titleLight,
