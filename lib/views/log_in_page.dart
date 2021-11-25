@@ -3,10 +3,12 @@ import 'package:demo_loan_repayment_app/controllers/login_page_controller.dart';
 import 'package:demo_loan_repayment_app/controllers/size_config_controller.dart';
 import 'package:demo_loan_repayment_app/controllers/strings_controller.dart';
 import 'package:demo_loan_repayment_app/controllers/theme_controller.dart';
+import 'package:demo_loan_repayment_app/views/home_page.dart';
 import 'package:demo_loan_repayment_app/views/loan_repayments_history_page.dart';
 import 'package:demo_loan_repayment_app/widgets/text_field_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LogInPage extends StatelessWidget {
   const LogInPage({Key? key}) : super(key: key);
@@ -44,9 +46,7 @@ class LoginButtonWidget extends StatelessWidget {
         GestureDetector(
           onTap: () {
             Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => LoanRepaymentsHistoryPage()));
+                context, MaterialPageRoute(builder: (context) => HomePage()));
           },
           child: Container(
             width: double.infinity,
@@ -71,7 +71,7 @@ class LoginButtonWidget extends StatelessWidget {
             child: Center(
               child: FittedBox(
                 child: Text(
-                  '${StringController.loginButtonString}',
+                  AppLocalizations.of(context)!.loginButtonText,
                   style: Theme.of(context).textTheme.button,
                   textAlign: TextAlign.center,
                 ),
@@ -173,7 +173,7 @@ class LoginPageLogoAndTextWidgt extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: CircleAvatar(
                     radius: SizeConfigController.isMobilePotrait
-                        ? 12 * SizeConfigController.imageSizeMultiplier
+                        ? 14 * SizeConfigController.imageSizeMultiplier
                         : 4 * SizeConfigController.imageSizeMultiplier,
                     backgroundImage:
                         AssetImage(ImagePathController.govermentLogoImage))),
@@ -187,7 +187,7 @@ class LoginPageLogoAndTextWidgt extends StatelessWidget {
                 horizontal: 6 * SizeConfigController.widthMultiplier,
               ),
               child: Text(
-                StringController.loginPageString,
+                AppLocalizations.of(context)!.loginPageWelcomeText,
                 style: Theme.of(context).textTheme.headline4,
               ),
             ),

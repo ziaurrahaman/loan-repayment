@@ -1,13 +1,20 @@
+import 'dart:math';
+
 import 'package:demo_loan_repayment_app/bindings/bindings.dart';
+import 'package:demo_loan_repayment_app/controllers/locale_controller.dart';
 import 'package:demo_loan_repayment_app/controllers/size_config_controller.dart';
 import 'package:demo_loan_repayment_app/controllers/theme_controller.dart';
 import 'package:demo_loan_repayment_app/views/loan_repayments_history_page.dart';
 import 'package:demo_loan_repayment_app/views/log_in_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:get/get.dart';
+import 'l10n/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,18 +28,32 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  //var locale = Get.find<LocalController>().locale;
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
         return OrientationBuilder(
           builder: (context, orientation) {
+            //   Get.put<LocalController>(LocalController());
             SizeConfigController().init(constraints, orientation);
-            return GetMaterialApp(
-              initialBinding: AllControllerBindings(),
-              title: 'Flutter Demo',
-              theme: ThemeController.lightTheme,
-              home: LogInPage(),
+
+            return GetBuilder<LocalController>(
+              init: LocalController(),
+              builder: (contorller) => GetMaterialApp(
+                initialBinding: AllControllerBindings(),
+                localizationsDelegates: [
+                  AppLocalizations.delegate,
+                  GlobalMaterialLocalizations.delegate,
+                  GlobalCupertinoLocalizations.delegate,
+                  GlobalWidgetsLocalizations.delegate
+                ],
+                supportedLocales: L10n.all,
+                locale: contorller.locale,
+                title: 'Flutter Demo',
+                theme: ThemeController.lightTheme,
+                home: LogInPage(),
+              ),
             );
           },
         );

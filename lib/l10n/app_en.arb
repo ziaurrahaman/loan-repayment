@@ -1,0 +1,17 @@
+{
+    "language": "English",
+    "loginPageWelcomeText": "Welcome to Department of Rural Development and Cooperatives",
+    "loginButtonText": "Login",
+    "homePageAppbarTitle": "RDCD",
+    "addMember": "Add Somity Member",
+    "fieldVisitHistory":"Visit History",
+    "somityMeeting":"Somity Meeting",
+    "attendance":"Attendance",
+    "profileMangement": "Profile Management",
+    "electronicPassbook":"Electronic Passbook",
+    "loanApply":"Apply Loan",
+    "offlineTransaction":"Offline Transaction"
+
+
+    
+}

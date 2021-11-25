@@ -14,7 +14,6 @@ class ThemeController {
     brightness: Brightness.light,
     textTheme: lightTextTheme,
   );
-
   // static final ThemeData darkTheme = ThemeData(
   //   scaffoldBackgroundColor: Colors.black,
   //   brightness: Brightness.dark,

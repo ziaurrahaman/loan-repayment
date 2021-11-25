@@ -23,6 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations: 
+    sdk: flutter         
   hive: ^2.0.4  
   hive_flutter: ^1.1.0
   path_provider: ^2.0.6
@@ -30,6 +32,7 @@ dependencies:
   flutter_secure_storage: ^4.2.1
   connectivity: ^3.0.6
   cloud_firestore: ^3.1.0
+  intl: ^0.17.0
   
 
 
@@ -73,6 +76,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  generate: true
 
     
 
